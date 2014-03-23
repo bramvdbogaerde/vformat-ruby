@@ -1,3 +1,5 @@
+# encoding: US-ASCII
+
 #
 #  Copyright (c) 2007 Jan Becvar <jan.becvar@solnet.cz>
 #  Copyright (c) 2007 soLNet, s.r.o. 
