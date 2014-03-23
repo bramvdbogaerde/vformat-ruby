@@ -477,7 +477,7 @@ module VFormat
                     #
                     if raw_value =~ /[\x00-\x08\x0e-\x1f]/u
                         @encoding = :b64
-                    elsif @result.size + raw_value.size >= 75 or raw_value =~ /[\r\n\x80-\xff]/u
+                    elsif @result.size + raw_value.size >= 75 or raw_value =~ Regexp.new(/[\r\n\x80-\xff]/u,nil,'n')
                         # :qp pouzijeme kdykoliv je potreba provest folding, nebo
                         # escapovat spec. znaky, jako jsou napr. \r, \n
                         #
